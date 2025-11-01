@@ -1,0 +1,16 @@
+[build]
+  command = "pnpm build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "20"
+  PNPM_VERSION = "9"
+  NPM_FLAGS = "--legacy-peer-deps"
+  NEXT_TELEMETRY_DISABLED = "1"
+  NETLIFY_USE_PNPM = "true"
+
+# 👇 Esto permite los módulos nativos de HeroUI
+[build.allow_scripts]
+  "@heroui/shared-utils" = true
+  "sharp" = true
+  "unrs-resolver" = true
