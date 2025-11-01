@@ -1,16 +1,10 @@
 [build]
-  command = "pnpm build"
-  publish = "out"
+  # Activa pnpm 10 y luego construye
+  command = "corepack enable && corepack prepare pnpm@10.19.0 --activate && pnpm install --frozen-lockfile && pnpm build"
+  publish = ".next" # o "out" si usas next export
 
 [build.environment]
   NODE_VERSION = "20"
-  PNPM_VERSION = "9"
-  NPM_FLAGS = "--legacy-peer-deps"
-  NEXT_TELEMETRY_DISABLED = "1"
   NETLIFY_USE_PNPM = "true"
-
-# 👇 Esto permite los módulos nativos de HeroUI
-[build.allow_scripts]
-  "@heroui/shared-utils" = true
-  "sharp" = true
-  "unrs-resolver" = true
+  PNPM_VERSION = "10.19.0"
+  NEXT_TELEMETRY_DISABLED = "1"
