@@ -39,15 +39,15 @@ export default function Navbar() {
                  backdrop-blur-lg backdrop-saturate-150 bg-background/70 px-6"
     >
       {/* Izquierda: Toggle + Brand */}
-      <NavbarContent className="sm:basis-0" justify="start">
+      <NavbarContent className="basis-auto sm:basis-auto" justify="start">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
-        <NavbarBrand>
+        <NavbarBrand className="shrink-0">
           <NextLink
             href="/"
-            className="text-2xl sm:text-3xl font-bold tracking-tight"
+            className="text-2xl sm:text-3xl font-bold tracking-tight hover:text-primary transition-colors whitespace-nowrap"
           >
             EMERSON R
           </NextLink>

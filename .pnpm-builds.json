@@ -1,0 +1,7 @@
+{
+  "allowedPatterns": [
+    "@heroui/*",
+    "sharp",
+    "unrs-resolver"
+  ]
+}

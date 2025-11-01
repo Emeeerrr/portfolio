@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           <HeroUIProvider /* locale="en-US" */>
             <Navbar />
-            {children}
+            <main className="flex-1">{children}</main>
           </HeroUIProvider>
         </NextThemesProvider>
       </body>
