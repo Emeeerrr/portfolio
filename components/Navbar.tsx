@@ -13,22 +13,20 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Link as UILink,
-} from "@heroui/react";
+} from "@heroui/navbar";
+import { Link as UILink } from "@heroui/link";
 
 const NAV_LINKS = [
   { href: "/", label: "Home page" },
   { href: "/about", label: "About me" },
 ];
 
-export default function Navbar() {
+export default function SiteNavbar() { // ✅ renombra tu componente
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const isActive = (href: string) =>
-    href === "/"
-      ? pathname === "/"
-      : pathname?.startsWith(href);
+    href === "/" ? pathname === "/" : pathname?.startsWith(href);
 
   return (
     <HeroNavbar
@@ -39,7 +37,7 @@ export default function Navbar() {
                  backdrop-blur-lg backdrop-saturate-150 bg-background/70 px-6"
     >
       {/* Izquierda: Toggle + Brand */}
-      <NavbarContent className="basis-auto sm:basis-auto" justify="start">
+      <NavbarContent justify="start">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
@@ -79,7 +77,6 @@ export default function Navbar() {
 
       {/* Menú (mobile) */}
       <NavbarMenu>
-        {/* Header compacto con brand + switch */}
         <div className="flex items-center justify-between px-2 py-2">
           <span className="font-bold text-xl">EMERSON R</span>
           <ThemeSwitch />

@@ -1,12 +1,15 @@
 @import "tailwindcss";
 
-/* === Requerido para HeroUI + Tailwind v4 === */
+/* === HeroUI + Tailwind v4 === */
 @layer theme, base, components, utilities;
-/* Plugin de HeroUI (ruta correcta desde app/globals.css) */
+
+/* Apunta al plugin HeroUI que acabas de corregir */
 @plugin "./styles/hero.ts";
-/* Ajusta la ruta según dónde esté este CSS respecto a node_modules */
+
+/* Apunta correctamente al tema desde node_modules */
 @source "../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}";
 
+@source "../node_modules/@heroui/**/*.{js,ts,jsx,tsx}";
 
 :root {
   --background: #ffffff;

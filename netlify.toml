@@ -1,10 +1,7 @@
 [build]
-  # Activa pnpm 10 y luego construye
   command = "corepack enable && corepack prepare pnpm@10.19.0 --activate && pnpm install --frozen-lockfile && pnpm build"
-  publish = ".next" # o "out" si usas next export
+  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
-  NETLIFY_USE_PNPM = "true"
-  PNPM_VERSION = "10.19.0"
   NEXT_TELEMETRY_DISABLED = "1"

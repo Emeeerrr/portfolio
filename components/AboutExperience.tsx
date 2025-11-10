@@ -1,7 +1,7 @@
 "use client";
 
 import { Accordion, AccordionItem } from "@heroui/accordion";
-import { Card, CardBody } from "@heroui/react";
+import { Card, CardBody } from "@heroui/card";
 import { motion } from "framer-motion";
 
 const easeOut = [0.16, 1, 0.3, 1] as const;

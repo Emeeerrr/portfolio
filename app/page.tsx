@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@heroui/react";
+import { Button } from "@heroui/button";
 import { Divider } from "@heroui/divider";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";

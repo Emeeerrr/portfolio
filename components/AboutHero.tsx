@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Button, Card, CardBody } from "@heroui/react";
+import { Card, CardBody } from "@heroui/card";
 import { motion } from "framer-motion";
 import { Snippet } from "@heroui/snippet";
+import { Button } from "@heroui/button";
 
 const easeOut = [0.16, 1, 0.3, 1] as const;
 
