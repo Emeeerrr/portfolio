@@ -19,10 +19,10 @@ export default function PitchSection() {
     <section className="mx-auto max-w-6xl px-6 md:px-8">
       {/* Headline */}
       <motion.div {...fade(0)} className="text-center md:text-left mb-10 md:mb-14">
-        <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
             I build digital products that connect design, code, and impact.
         </h2>
-        <p className="mt-4 text-foreground/80 text-lg md:text-xl max-w-3xl md:max-w-2xl mx-auto md:mx-0">
+        <p className="mt-4 text-foreground/80 text-lg md:text-xl mx-auto md:mx-0">
             From idea to production, I craft responsive, high-performing web apps and 
             e-commerce platforms using Angular, Next.js, and Flask — blending UX clarity, 
             backend precision, and cloud scalability. I design systems that work beautifully and 

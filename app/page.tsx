@@ -120,12 +120,12 @@ export default function HomePage() {
       </section>
       <Divider/>
 
-      <section className="mx-auto max-w-6xl py-12 md:py-16">
+      <section className="mx-auto max-w-6xl py-12 md:py-16 px-6 md:px-8">
         <header className="mb-8 text-center md:text-left">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
             Portfolio projects
           </h2>
-          <p className="mt-3 text-foreground/80 max-w-2xl mx-auto md:mx-0">
+          <p className="mt-4 text-foreground/80 text-lg md:text-xl mx-auto md:mx-0">
             Every project is like a new little story: unique starting points and
             tasks, but all with a happy end.
           </p>
