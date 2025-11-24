@@ -39,8 +39,25 @@ export const SunIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 export default function ThemeSwitch() {
-  const { theme, setTheme } = useTheme();
-  const isDark = theme === "dark";
+  // Use resolvedTheme instead of theme to reflect the actual applied theme
+  // and avoid a required double-click when initial value is "system".
+  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Do not attempt to render the switch until hydration completes.
+  // This avoids mismatches where `resolvedTheme` might be undefined
+  // during server render or before the client has applied the class.
+  if (!mounted) {
+    return (
+      <div aria-hidden className="w-10 h-6 mr-1" />
+    );
+  }
+
+  const isDark = resolvedTheme === "dark";
 
   return (
     <Switch
